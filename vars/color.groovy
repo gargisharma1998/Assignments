@@ -1,4 +1,4 @@
 #!/usr/bin/env groovy
 def info(message){
-  println "\u001b[31m$message"
+  print "\u001b[31m$message"
 }
