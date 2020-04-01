@@ -1,4 +1,4 @@
 #!/usr/bin/env groovy
-wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
-  sh 'something that outputs ansi colored stuff'
+def info(message){
+  println "\u001b[31m$message"
 }
