@@ -1,13 +1,4 @@
 #!/usr/bin/env groovy
-def loadColors(){
-   RED='\033[0;31m'
-   BLUE='\033[0;34m'
-   CYAN='\033[0;36m'
-   GREEN='\033[0;32m'
-   PURPLE='\033[0;35m'
-   ON_YELLOW='\033[43m'
-   NC='033[0m'
-}
-options{
-   ansicolor('xterm')
+wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
+  sh 'something that outputs ansi colored stuff'
 }
